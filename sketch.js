@@ -62,16 +62,18 @@ function setup() {
    polygon = Bodies.circle(50,200,20);
    World.add(world,polygon);
 
-   slngsht = new Hexagon(this.polygon,{x:100,y:200});
+   slngsht = new shoot(this.polygon,{x:100,y:200});
   
 
 }
 function draw() {
   background(56,44,44); 
+
  
   textSize(20);
-  fill("lightyellow");
-  
+  fill("black");
+  stroke("lightyellow");
+  text("press space to bring the hitter back",300,20);
 
   ground.display();
   stand1.display();
@@ -115,8 +117,8 @@ function draw() {
 
  fill("gold");
  imageMode(CENTER);
- image(polygon_img,polygon_img.position.x,polygon_img.position.y,40,40);
-
+ 
+image(polygon_img,polygon.position.x,polygon.position.y,40,40);
  slngsht.display();
 
 }

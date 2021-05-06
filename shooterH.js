@@ -1,4 +1,4 @@
-class Hexagon{
+class shoot{
    constructor(bodyA,pointB){
        var options = {
            bodyA:bodyA,
@@ -19,7 +19,7 @@ fly(){
 }
    display(){
        if(this.slng.bodyA){
-           var pointA =this.body.pointA.position;
+           var pointA =this.slng.bodyA.position;
            var pointB =this.pointB;
 
            strokeWeight(4);
